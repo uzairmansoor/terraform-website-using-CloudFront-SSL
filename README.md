@@ -1,4 +1,4 @@
-# Infrastructure Deployment README
+# Infrastructure Deployment
 
 This repository contains Terraform configuration files to deploy an AWS infrastructure setup including ACM (AWS Certificate Manager), CloudFront distribution, Route 53 DNS records, S3 bucket configurations, and policies. This setup is designed to host a static website securely on AWS.
 
