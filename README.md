@@ -27,6 +27,7 @@ cd terraform-website-using-CloudFront-SSL/tf/environments/dev
 ### Step 2: Initialize Terraform
 
 ### Initialize the Terraform configuration and prepare the working directory ###
+```bash
 terraform init
 
 ### Step 3: Update Variables
@@ -36,15 +37,18 @@ terraform init
 ### Step 4: Initialize Terraform
 
 ### Create an execution plan and save it to a file named plan.out ###
+```bash
 terraform plan -out plan.out
 
 ### Step 4: Apply the Execution Plan
 
 ### Apply the changes specified in the saved plan file plan.out ###
+```bash
 terraform apply plan.out
 
 ### Step 5: Destroy the Infrastructure
 
 ### Destroy the managed infrastructure ###
+```bash
 terraform destroy
 
