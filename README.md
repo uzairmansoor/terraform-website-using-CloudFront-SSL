@@ -40,7 +40,7 @@ terraform init
 
 ### Step 4: Create an Execution Plan
 
-* Create an execution plan and save it to a file named plan.out
+* Create an execution plan and save it to a file named `plan.out`
 
 ```
 terraform plan -out plan.out
@@ -48,7 +48,7 @@ terraform plan -out plan.out
 
 ### Step 4: Apply the Execution Plan
 
-* Apply the changes specified in the saved plan file plan.out
+* Apply the changes specified in the saved plan file `plan.out`
 
 ```
 terraform apply plan.out
