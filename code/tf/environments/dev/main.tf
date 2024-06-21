@@ -7,7 +7,7 @@ data "aws_caller_identity" "current" {}
 
 # module "route53" {
 #   source                  = "../../modules/route53"
-#   rootDomainName          = "goldirahedge.com"
+#   rootDomainName          = "domain.com"
 # }
 module "s3" {
   source                  = "../../modules/s3"
@@ -24,20 +24,20 @@ module "s3BucketCfLogs" {
 module "acm" {
   source                  = "../../modules/acm"
   region                  = var.region
-  rootDomainName          = "goldirahedge.com"
-  alternateSubDomains     = ["*.goldirahedge.com"]
+  rootDomainName          = "domain.com"
+  alternateSubDomains     = ["*.domain.com"]
 }
 module "cloudFront" {
   source                  = "../../modules/cloudFront"
-  rootDomainName          = "goldirahedge.com"
+  rootDomainName          = "domain.com"
   s3BucketName            = module.s3.s3BucketName
   s3BucketWebsiteDomain   = module.s3.s3BucketWebsiteDomain
   awsAcmCertificateArn    = module.acm.awsAcmCertificateArn
   cfLogS3BucketDomainName = module.s3BucketCfLogs.s3BucketDomainName
   albDnsName              = "deleteme-umair-alb-1693925718.us-east-1.elb.amazonaws.com"
   cfCustomCacheBehaviourPath  = "/blog/*"
-  wwwSubDomainName        = "www.goldirahedge.com"
-  cfUpdateRoute53Records  = ["goldirahedge.com"]
+  wwwSubDomainName        = "www.domain.com"
+  cfUpdateRoute53Records  = ["domain.com"]
   route53HostedZoneId     = "Z0908108FRIDHUGQC9S7"
   # createRoute53HostedZoneId = module.route53.route53HostedZoneId
 }
