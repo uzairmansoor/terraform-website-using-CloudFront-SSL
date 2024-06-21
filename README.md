@@ -38,6 +38,7 @@ terraform init
 
 * Update the variable values in the `main.tf` file according to your scenario. For example, rootDomainName, alternateSubDomains, albDnsName, wwwSubDomainName, cfUpdateRoute53Records, route53HostedZoneId, etc.
 
+Note:
 If you have already created a HostedZone, you need to update its HostedZone ID in the variable named `route53HostedZoneId`. Otherwise, you need to uncomment the route53 code block in the `main.tf` file and update the lines where the HostedZone ID should be referenced.
 
 ### Step 4: Create an Execution Plan
