@@ -38,7 +38,7 @@ terraform init
 
 * Update the variable values in the main.tf file according to your scenario *
 
-### Step 4: Initialize Terraform
+### Step 4: Create an Execution Plan
 
 * Create an execution plan and save it to a file named plan.out *
 
