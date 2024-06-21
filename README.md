@@ -21,7 +21,7 @@ Clone this repository to your local machine:
 ```bash
 git clone <repository-url>
 cd terraform-website-using-CloudFront-SSL/tf/environments/dev
-
+```bash
 ### Ensure you run the following commands in the directory where your main.tf file is located ###
 
 ### Step 2: Initialize Terraform
@@ -29,7 +29,7 @@ cd terraform-website-using-CloudFront-SSL/tf/environments/dev
 ### Initialize the Terraform configuration and prepare the working directory ###
 ```bash
 terraform init
-
+```bash
 ### Step 3: Update Variables
 
 ### Update the variable values in the main.tf file to fit your scenario ###
