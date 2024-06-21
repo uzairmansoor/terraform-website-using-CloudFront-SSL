@@ -21,7 +21,7 @@ Clone this repository to your local machine:
 ```
 git clone <repository-url>
 
-cd terraform-website-using-CloudFront-SSL/tf/environments/dev
+cd terraform-website-using-CloudFront-SSL/code/tf/environments/dev
 ```
 
 Ensure you run the following commands in the directory where your `main.tf` file is located
