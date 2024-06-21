@@ -36,7 +36,9 @@ terraform init
 
 ### Step 3: Update Variables
 
-* Update the variable values in the `main.tf` file according to your scenario
+* Update the variable values in the `main.tf` file according to your scenario. For example, rootDomainName, alternateSubDomains, albDnsName, wwwSubDomainName, cfUpdateRoute53Records, route53HostedZoneId.
+
+If you have already created a HostedZone, you need to update its HostedZone ID in the variable named `route53HostedZoneId`.
 
 ### Step 4: Create an Execution Plan
 
@@ -53,6 +55,12 @@ terraform plan -out plan.out
 ```
 terraform apply plan.out
 ```
+
+Now, you need to access your domain, so you'll have to upload the index.html file to the S3 bucket. Secondly, ensure that your WordPress configurations on the EC2 instance are accessible via /blog/.
+
+To access the S3 bucket: https://{domain.com}   OR  www.https://{domain.com}
+
+To access the S3 bucket: https://{domain.com}/blog/ OR  www.https://{domain.com}/blog/
 
 ### Step 5: Destroy the Infrastructure
 
