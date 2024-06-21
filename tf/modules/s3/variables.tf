@@ -1,21 +1,14 @@
 variable "project" {
   type = string
   description = "Project name"
-  default     = "devops-training"
 }
 variable "env" {
   type = string
   description = "Environment name"
-  default     = "dev"
 }
 variable "app" {
   type = string
   description = "App name"
-  default     = "static"
-}
-variable "s3BucketName" {
-  type = string
-  description = "S3 bucket name"
 }
 variable "s3BucketOwnership" {
   type = string

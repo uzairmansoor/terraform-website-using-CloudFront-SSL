@@ -1,6 +1,6 @@
 resource "aws_acm_certificate" "acmCertificate" {
   domain_name               = var.rootDomainName
-  subject_alternative_names = ["*.${var.rootDomainName}"]
+  subject_alternative_names = var.alternateSubDomains
   validation_method = "DNS"
   lifecycle {
     create_before_destroy = true

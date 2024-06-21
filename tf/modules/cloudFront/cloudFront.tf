@@ -36,11 +36,11 @@ resource "aws_cloudfront_distribution" "cloudFrontDistribution" {
   is_ipv6_enabled     = var.isIpv6Enable
   http_version        = var.cfHttpVersion
 
-  # logging_config {
-  #   include_cookies = false
-  #   bucket          = var.cfLogS3BucketName
-  #   prefix          = "cf-logs"
-  # }
+  logging_config {
+    include_cookies = false
+    bucket          = var.cfLogS3BucketDomainName
+    prefix          = "cf-logs"
+  }
 
   # TODO - Add variable to support ordered_cache_behavior
   # ordered_cache_behavior (Optional) - An ordered list of cache behaviors resource for this distribution. List from top to bottom in order of precedence. The topmost cache behavior will have precedence 0.
@@ -89,7 +89,7 @@ resource "aws_cloudfront_distribution" "cloudFrontDistribution" {
 }
 
 resource "aws_route53_record" "cfRoute53Record" {
-  zone_id = "Z0908108FRIDHUGQC9S7" #var.route53HostedZoneId #var.create_route53_hosted_zone ? var.createRoute53HostedZoneId : var.route53HostedZoneId
+  zone_id = var.route53HostedZoneId #var.route53HostedZoneId #var.create_route53_hosted_zone ? var.createRoute53HostedZoneId : var.route53HostedZoneId
   name    = var.rootDomainName
   type    = "A"
   alias {
@@ -100,9 +100,9 @@ resource "aws_route53_record" "cfRoute53Record" {
 }
 
 resource "aws_route53_record" "cfWwwRoute53Record" {
-  zone_id = "Z0908108FRIDHUGQC9S7" #var.route53HostedZoneId #var.create_route53_hosted_zone ? var.createRoute53HostedZoneId : var.route53HostedZoneId
+  zone_id = var.route53HostedZoneId #var.create_route53_hosted_zone ? var.createRoute53HostedZoneId : var.route53HostedZoneId
   name    = var.wwwSubDomainName
   type    = "CNAME"
    ttl    = 300
-  records        = ["${var.rootDomainName}"]
+  records = var.cfUpdateRoute53Records
 }

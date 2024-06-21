@@ -1,7 +1,6 @@
 variable "rootDomainName" {
   type = string
   description = "Website root domain name"
-  default     = "goldirahedge.com"
 }
 variable "cfDistComment" {
   type = string
@@ -22,7 +21,7 @@ variable "s3BucketName" {
   type = string
   description = "S3 bucket name"
 }
-variable "cfLogS3BucketName" {
+variable "cfLogS3BucketDomainName" {
   type = string
   description = "Cloudfront logs S3 bucket name"
 }
@@ -106,7 +105,6 @@ variable "route53HostedZoneId" {
 variable "wwwSubDomainName" {
   type = string
   description = "Domain Name"
-  default = "www.goldirahedge.com"
 }
 variable "albDnsName" {
   type = string
@@ -133,4 +131,8 @@ variable "cfViewerProtocolPolicy" {
 variable "cfCustomCacheBehaviourPath" {
   type = string
   description = "Cloudfront cache behaviour path pattern"
+}
+variable "cfUpdateRoute53Records" {
+  type        = list(string)
+  description = "List of Domain Names"
 }

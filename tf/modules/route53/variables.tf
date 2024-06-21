@@ -6,5 +6,4 @@ variable "create_route53_hosted_zone" {
 variable "rootDomainName" {
   type = string
   description = "Domain Name"
-  default = "goldirahedge.com"
 }
