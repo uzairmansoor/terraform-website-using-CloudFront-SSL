@@ -24,7 +24,7 @@ git clone <repository-url>
 cd terraform-website-using-CloudFront-SSL/tf/environments/dev
 ```
 
-Ensure you run the following commands in the directory where your 'main.tf' file is located
+Ensure you run the following commands in the directory where your `main.tf` file is located
 
 ### Step 2: Initialize Terraform
 
@@ -36,7 +36,7 @@ terraform init
 
 ### Step 3: Update Variables
 
-* Update the variable values in the 'main.tf' file according to your scenario *
+* Update the variable values in the `main.tf` file according to your scenario *
 
 ### Step 4: Create an Execution Plan
 
