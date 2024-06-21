@@ -36,7 +36,7 @@ terraform init
 
 ### Step 3: Update Variables
 
-* Update the variable values in the main.tf file to fit your scenario *
+* Update the variable values in the main.tf file according to your scenario *
 
 ### Step 4: Initialize Terraform
 
