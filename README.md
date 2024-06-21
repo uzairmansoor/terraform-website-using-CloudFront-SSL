@@ -28,7 +28,7 @@ Ensure you run the following commands in the directory where your `main.tf` file
 
 ### Step 2: Initialize Terraform
 
-* Initialize the Terraform configuration and prepare the working directory *
+* Initialize the Terraform configuration and prepare the working directory
 
 ```
 terraform init
@@ -36,11 +36,11 @@ terraform init
 
 ### Step 3: Update Variables
 
-* Update the variable values in the `main.tf` file according to your scenario *
+* Update the variable values in the `main.tf` file according to your scenario
 
 ### Step 4: Create an Execution Plan
 
-* Create an execution plan and save it to a file named plan.out *
+* Create an execution plan and save it to a file named plan.out
 
 ```
 terraform plan -out plan.out
@@ -48,7 +48,7 @@ terraform plan -out plan.out
 
 ### Step 4: Apply the Execution Plan
 
-* Apply the changes specified in the saved plan file plan.out *
+* Apply the changes specified in the saved plan file plan.out
 
 ```
 terraform apply plan.out
@@ -56,7 +56,7 @@ terraform apply plan.out
 
 ### Step 5: Destroy the Infrastructure
 
-* Destroy the managed infrastructure *
+* Destroy the managed infrastructure
 
 ```
 terraform destroy
