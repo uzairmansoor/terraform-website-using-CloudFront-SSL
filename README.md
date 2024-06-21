@@ -18,37 +18,32 @@ Follow these steps to deploy the infrastructure:
 
 Clone this repository to your local machine:
 
-```bash
 git clone <repository-url>
 cd terraform-website-using-CloudFront-SSL/tf/environments/dev
-```bash
-### Ensure you run the following commands in the directory where your main.tf file is located ###
+
+Ensure you run the following commands in the directory where your main.tf file is located
 
 ### Step 2: Initialize Terraform
 
-### Initialize the Terraform configuration and prepare the working directory ###
-```bash
+* Initialize the Terraform configuration and prepare the working directory *
 terraform init
-```bash
+
 ### Step 3: Update Variables
 
-### Update the variable values in the main.tf file to fit your scenario ###
+* Update the variable values in the main.tf file to fit your scenario *
 
 ### Step 4: Initialize Terraform
 
-### Create an execution plan and save it to a file named plan.out ###
-```bash
+* Create an execution plan and save it to a file named plan.out *
 terraform plan -out plan.out
 
 ### Step 4: Apply the Execution Plan
 
-### Apply the changes specified in the saved plan file plan.out ###
-```bash
+* Apply the changes specified in the saved plan file plan.out *
 terraform apply plan.out
 
 ### Step 5: Destroy the Infrastructure
 
-### Destroy the managed infrastructure ###
-```bash
+* Destroy the managed infrastructure *
 terraform destroy
 
