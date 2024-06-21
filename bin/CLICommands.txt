@@ -1,0 +1,14 @@
+Initialize a Terraform configuration directory. Downloads and installs provider plugins defined in the configuration.
+terraform init
+
+Check and validate the configuration files for syntax errors.
+terraform validate
+
+Generate an execution plan describing what Terraform will do to reach the desired state specified in the configuration files. Outputs the plan to stdout or a specified file with -out.
+terraform plan
+
+Apply the changes required to reach the desired state of the configuration, as described by the execution plan.
+terraform apply
+
+Destroy the Terraform-managed infrastructure.
+terraform destroy
